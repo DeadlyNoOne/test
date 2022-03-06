@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestApp": {
+      "commandName": "Project",
+      "commandLineArgs": "https://pja.edu.pl/"
+    }
+  }
+}
