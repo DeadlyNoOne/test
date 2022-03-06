@@ -25,15 +25,22 @@ namespace TestApp
             var content = await response.Content.ReadAsStringAsync();
             Console.WriteLine(response);
 
-            var regex = new Regex(@"");
+            var regex = new Regex(@"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+");
 
             var matchCollection = regex.Matches(content);
 
+            var set = new HashSet<string>();
+
             foreach (var item in matchCollection)
             {
-
+                set.Add(item.ToString());
             }
-            
+
+            foreach (var item in set)
+            {
+                Console.WriteLine(item);
+            }
+
 
         }
     }
